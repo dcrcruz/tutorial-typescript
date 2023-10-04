@@ -12,9 +12,10 @@ if (typeof userInput === 'string') {
 }
 
 // never type
-function generateError(message: string, code: number) {
+// can specify that function returns never
+function generateError(message: string, code: number): never {
     throw{ message: message, errorCode: code }; // returns never
 }
 
 const result = generateError('Error',500);
-console.log(result)
+console.log(result);
