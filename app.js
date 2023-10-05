@@ -10,6 +10,7 @@ if (typeof userInput === 'string') {
     userName = userInput;
 }
 // never type
+// can specify that function returns never
 function generateError(message, code) {
     throw { message: message, errorCode: code }; // returns never
 }
